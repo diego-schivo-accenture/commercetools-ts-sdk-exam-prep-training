@@ -21,7 +21,7 @@ export const getProductTypes = async (): Promise<ClientResponse<ProductTypePaged
         .get()
         .execute();
     
-export const transferProductType = async (productType: ProductType): Promise<ClientResponse<ProductType>> => 
+export const replicateProductType = async (productType: ProductType): Promise<ClientResponse<ProductType>> => 
     pocApiRoot
         .productTypes()
         .post({

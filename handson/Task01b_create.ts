@@ -35,7 +35,7 @@ const customerDraft: CustomerDraft = {
     defaultShippingAddress: 0
 };
 
-createCustomer(customerDraft).then().then(log).catch(log);
+createCustomer(customerDraft).then(log).catch(log);
 
 // getCustomerByKey(customerDraft.key!).then(log).catch(log);
 

@@ -6,11 +6,11 @@ import { createPayment } from "./lib/payment";
 import { log } from "../utils/logger";
 
 const customerKey = "tt-customer";
-const cartId = "2f8397ef-966a-4935-bd97-b2f7ed939303";
+const cartId = "";
 const customObjectContainer = "Schemas";
 const customObjectKey = "bonusPointsCalculationSchema";
 const customerBonusFieldName = "bonuspoints-custom-field";
-const taxCategoryKey = "standard-tax-category";
+const taxCategoryKey = "standard-tax";
 const query = `
     query ($cartId: String!, $customerKey: String!, $customObjectContainer: String!) {
         cart (id: $cartId) { totalPrice { currencyCode centAmount } }
@@ -18,26 +18,6 @@ const query = `
         customObjects (container: $customObjectContainer) { results { key value } }
         }
     `;
-
-// TODO Step 1: Customer wants to create an order, get all data to update their bonus points
-//
-// getCustomerByKey(customerKey)
-//     .then(log)
-//     .catch(log);
-
-// checkout.getCartById(cartId)
-//     .then(log)
-//     .catch(log);
-
-// getCustomObjectByContainerAndKey(customObjectContainer, customObjectKey)
-//     .then(log)
-//     .catch(log);
-
-// // Now, improve the query with GraphQL
-
-// TODO Step 2: Fetch customer bonus points, cart value, bonus points calculation schema
-// Single GraphQL query to fetch all the information you need to place an order
-
 
 
 const placeOrder = async () => {

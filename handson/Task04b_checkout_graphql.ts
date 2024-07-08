@@ -7,38 +7,19 @@ import { log } from "../utils/logger";
 
 // TODO Step 1: Update customer key, cartId and other consts
 const customerKey = "tt-customer";
-const cartId = "2f8397ef-966a-4935-bd97-b2f7ed939333";
+const cartId = "";
 const customObjectContainer = "Schemas";
 const customObjectKey = "bonusPointsCalculationSchema";
 const customerBonusFieldName = "bonuspoints-custom-field";
-const taxCategoryKey = "standard-tax-category";
+const taxCategoryKey = "standard-tax";
 
 
-// // TODO Step 1: Customer wants to create an order, get all data to update their bonus points
-//
-// getCustomerByKey(customerKey)
-//     .then(log)
-//     .catch(log);
-
-// checkout.getCartById(cartId)
-//     .then(log)
-//     .catch(log);
-
-// getCustomObjectByContainerAndKey(customObjectContainer, customObjectKey)
-//     .then(log)
-//     .catch(log);
-
-// // Now, improve the query with GraphQL
-
-// TODO Step 2: Fetch customer bonus points, cart value, bonus points calculation schema
+// TODO Step 1: Fetch customer bonus points, cart value, bonus points calculation schema
 // Single GraphQL query to fetch all the information you need to place an order
-
 
 
 const placeOrder = async () => {
     
-    // // TODO Step 2: Now use graphql as an improved method to get all the information
-    // // Prepare the query
     const query = `
     query ($cartId: String!, $customerKey: String!, $customObjectContainer: String!) {
         cart (id: $cartId) { totalPrice { currencyCode centAmount } }
@@ -62,11 +43,18 @@ const placeOrder = async () => {
     
     let earnedPoints = await calculateBonusPoints(cartTotal, customObject);
     
-    // // TODO Step 2:
-    // // 1. Add custom line item in the cart for bonus points
-    // // 2. Create order
-    // // 3. update bonus points on customer
+    // TODO Step 2:
+    // 1. Add custom line item in the cart for bonus points
+    // 2. Create order
+    // 3. update bonus points on customer
     
+
+    // if (order) {
+    //     return {
+    //         status: 201,
+    //         message: "Order created: " + order.body.id,
+    //     };
+    // }
 
 
     // // TODO Step 3

@@ -1,4 +1,4 @@
-import { getSourceProductType, getSourceProductTypes, transferProductType } from "./lib/productTypeService";
+import { getSourceProductType, getSourceProductTypes, replicateProductType } from "./lib/productTypeService";
 import {log} from "../utils/logger";
 
 // TODO Step 1: Provide credentials in .env for concept API client
@@ -12,6 +12,6 @@ import {log} from "../utils/logger";
 
 // Transfer a single product type
 // getSourceProductType("product-key")
-//     .then(productType => transferProductType(productType.body))
+//     .then(productType => replicateProductType(productType.body))
 //     .then(log)
 //     .catch(log);
