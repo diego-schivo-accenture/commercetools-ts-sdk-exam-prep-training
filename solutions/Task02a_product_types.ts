@@ -9,7 +9,7 @@ getSourceProductTypes().then(log).catch(log);
 
 // TODO Step 4: Use productTypeService to transfer product types from Concept to POC project
 getSourceProductTypes()
-    .then(productTypes => productTypes.body.results.map(transferProductType))
+    .then(productTypes => productTypes.body.results.map(replicateProductType))
     .then(log)
     .catch(log);
 
