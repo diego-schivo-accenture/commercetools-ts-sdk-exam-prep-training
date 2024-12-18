@@ -4,11 +4,10 @@
   "description": "Used in commercetools JavaScript Developer Exam Preparation Training",
   "main": "index.js",
   "scripts": {
-    
+    "5": "ts-node handson/Task05_subscriptions.ts",
     "prep-1a": "ts-node prep/Task01a_get.ts",
     "prep-1b": "ts-node prep/Task01b_create.ts",
     "prep-4a": "ts-node prep/Task04a_create_cart.ts",
-
     "1a": "ts-node handson/Task01a_get.ts",
     "1b": "ts-node handson/Task01b_create.ts",
     "2a": "ts-node handson/Task02a_product_types.ts",
@@ -18,9 +17,15 @@
     "3b": "ts-node handson/Task03b_custom_objects.ts",
     "4a": "ts-node handson/Task04a_create_cart.ts",
     "4b": "ts-node handson/Task04b_checkout_graphql.ts",
-    "5": "ts-node handson/Task05_subscriptions.ts",
     "6a": "ts-node handson/Task06a_search.ts",
-    "6b": "ts-node handson/Task06b_pagination.ts"
+    "6b": "ts-node handson/Task06b_pagination.ts",
+    "ds-4": "ts-node ds/Task_04_crud_operations.ts",
+    "ds-5": "ts-node ds/Task_05_product_modeling.ts",
+    "ds-7": "ts-node ds/Task_07_import_api.ts",
+    "ds-8": "ts-node ds/Task_08_checkout.ts",
+    "ds-9": "ts-node ds/Task_09_graphql.ts",
+    "ds-10": "ts-node ds/Task_10_custom_types.ts",
+    "ds-11": "ts-node ds/Task_11_custom_objects.ts"
   },
   "keywords": [
     "commercetools",
@@ -32,7 +37,7 @@
   "license": "MIT",
   "dependencies": {
     "@commercetools/importapi-sdk": "^4.1.0",
-    "@commercetools/platform-sdk": "^4.4.0",
+    "@commercetools/platform-sdk": "7.22.0",
     "@commercetools/sdk-client-v2": "^2.1.1",
     "chalk-animation": "1.6",
     "cli-highlight": "^2.1.11",
